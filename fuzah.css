@@ -1,0 +1,26 @@
+*{
+    /* reset padding and margin to zero on all elements */
+    margin: 0; 
+    padding: 0;
+    /* the so called global reset to account for funky browsers */
+    box-sizing: border-box;
+}
+
+#harddark {
+    /* to see our canvas */
+    border: 5px solid teal;
+    /* usual four lines to center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    /* we set max height to prevent canvas from flyng off screen in uncommon screen sizes */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#drdarkstarpng {
+display: none;
+}
+
+/*   */
