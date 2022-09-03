@@ -20,7 +20,7 @@ class Darkstar {
         this.strings = new SubtleStrings()
             }
     update(){ 
-        this.doctor.update()
+        this.doctor.update(this.strings.activeSubtleStrings)
 
     }
         draw(inkblotmagic){ 
@@ -35,7 +35,7 @@ console.log(darkstar)
 
 function animate(){
     inkblotmagic.clearRect(0,0,harddark.width, harddark.height)
-    //darkstar.update()
+    darkstar.update()
     darkstar.draw(inkblotmagic)
     requestAnimationFrame(animate)
 }
