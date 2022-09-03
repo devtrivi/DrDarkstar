@@ -1,19 +1,10 @@
-
-
-
 import  Doctor  from './dr.js'
-
-
-
-
-
-
+import { SubtleStrings } from './subtleStrings.js'
 
 
 window.addEventListener('load', function(){
 
 const harddarkness = document.getElementById('darklight')
-
 const inkblotmagic = harddark.getContext('2d')
 
 
@@ -25,17 +16,14 @@ class Darkstar {
         
         this.width = width
         this.height = height
-        
-        
-        
         this.doctor = new Doctor(this)
-    }
+        this.strings = new SubtleStrings()
+            }
     update(){ 
         this.doctor.update()
 
     }
-    
-    draw(inkblotmagic){ 
+        draw(inkblotmagic){ 
 this.doctor.draw(inkblotmagic)
     }
 }
