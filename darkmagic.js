@@ -1,5 +1,5 @@
-import  Doctor  from './dr.js'
-import { SubtleStrings } from './subtleStrings.js'
+import  Doctor  from './dr/dr.js'
+import { SubtleStrings } from './dr/subtleStrings.js'
 
 
 window.addEventListener('load', function(){
@@ -19,8 +19,8 @@ class Darkstar {
         this.doctor = new Doctor(this)
         this.strings = new SubtleStrings()
             }
-    update(){ 
-        this.doctor.update(this.strings.activeSubtleStrings)
+    update(deltaTime){ 
+        this.doctor.update(this.strings.activeSubtleStrings,deltaTime)
 
     }
         draw(inkblotmagic){ 
@@ -30,14 +30,19 @@ this.doctor.draw(inkblotmagic)
 
 
 const darkstar = new Darkstar(harddark.width, harddark.height)
-
+const lastTime = 0
 console.log(darkstar)
 
-function animate(){
+function animate(timeStamp){
+    const deltaTime = 5
+    //console.log('timeStamp : ',timeStamp, ' - lastTime : ',lastTime)
+    //console.log(typeof(timeStamp))
+    //console.log(typeof(lastTime))
+    //lastTime = timeStamp
     inkblotmagic.clearRect(0,0,harddark.width, harddark.height)
-    darkstar.update()
+    darkstar.update(deltaTime)
     darkstar.draw(inkblotmagic)
     requestAnimationFrame(animate)
 }
-animate()
+animate(1)
 })
