@@ -16,3 +16,8 @@ https://www.youtube.com/playlist?list=PLU9cwxLeypqiP16fBKj9yCl6DLq-WyBNC
 to further enrich visuals by taking input from whatever music you are listening into to modify the variables in the game, so the color palette, the generative growing patterns of trees, even enemy movement pattern and the damage of spells changes according to music.
 
 This will be hell to balance but thats beyond the point.
+
+
+
+
+https://sanskritdocuments.org/doc_devii/gAyatrIAratIHindi.html
